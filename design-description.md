@@ -6,6 +6,7 @@
 1.When the app is started, the user is presented with the main menu, which allows the user to (1) enter or edit current job details, (2) enter job offers, (3) adjust the comparison settings, or (4) compare job offers (disabled if no job offers were entered yet). 
 
 Actually, this is the System GUI-specific class. Theoritically, it is supposed to be MainMenue class with 4 attributes:(1) enter or edit current job details, (2) enter job offers, (3) adjust the comparison settings, or (4) compare job offers (disabled if no job offers were entered yet). User can click these four button to realize the function they want. In here, a SingleUser class has been created as an entry point.It is shown as follow:
+
 ![](https://github.com/tyang373/CS6300UML_pics/blob/main/SingleUser%20Class.jpg?raw=true)
 
 The attributes I set is the String `Name` of user(maybe unnecessary), a boolean `Hasjob` for determine the status that whether the user has a current job. This attribute will be used for define whether funciton(4)above will be enabled, in case there is no current job.
@@ -44,11 +45,13 @@ in both cases to the main menu.
 
 
 In this part,  a subclass 'CurrentJob' has been created, it is shown as follows:
+
 ![](https://github.com/tyang373/CS6300UML_pics/blob/main/CurrentJob%20subclass.jpg?raw=true)
 
 - It inherits all the attributes and method or operations of its superclass 'Jobs'. For example： `title`, `company` and `location` of attributes, `save or cancel` of operations.
 
 The 'Jobs' class is shown as follows:
+
 ![](https://github.com/tyang373/CS6300UML_pics/blob/main/Job%20Class.jpg?raw=true)
 
 - The only attribute I set for this subclass is a boolean `IsFirstTime`, if it is true, the user should enter the current job information.If it is false, the user can edit the current job information.
@@ -62,6 +65,7 @@ c. Be able to (1) enter another offer, (2) return to the main menu, or (3) compa
 offer (if they saved it) with the current job details (if present).
 
 In this part, I define 'job offers' as subclass of 'jobs' class is due to that it has the same ones listed for the current job. It is shown as follows:
+
 ![](https://github.com/tyang373/CS6300UML_pics/blob/main/JobOffer%20subclass.jpg?raw=true)
 
 - It inherits all the attributes and method or operations of its superclass 'Jobs'. For example： `title`, `company` and `location` of attributes, `save or cancel` of operations.
@@ -78,6 +82,7 @@ In this part, I define 'job offers' as subclass of 'jobs' class is due to that i
 If no weights are assigned, all factors are considered equal.
 
 In this part, I consider the comparison settings as a method incoporated into the 'Compare Job Offers' class. It is shown as follows:
+
 ![](https://github.com/tyang373/CS6300UML_pics/blob/main/CompareJobOffer%20class.jpg?raw=true)
 
 -when user wants to request for the job comparison, the first step is to do comparsion setting to assign the integer weights for the listed attribute above.
@@ -101,6 +106,7 @@ indicated.
  d. Be offered to perform another comparison or go back to the main menu.
 
 In this part, the class 'Compare Job Offers' has been created. It has the list attribute `Joblist`, which will be display String array `Title` and `Company`. It is shown as follows:
+
 ![](https://github.com/tyang373/CS6300UML_pics/blob/main/CompareJobOffer%20class.jpg?raw=true).
 
 When the user requests for comparing job offers. Several steps will be operated:
@@ -140,4 +146,5 @@ communication or saving between devices is necessary).
 For 7 and 8 requirements, they will be considered.
 
 The whole UML of this app is as follows:
+
 ![](https://github.com/tyang373/CS6300UML_pics/blob/main/design.jpg?raw=true)
